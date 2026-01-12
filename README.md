@@ -25,14 +25,6 @@ A fully-featured Rubik's cube timer web application with session management, sta
   - Switch between sessions
 - **Solution Generator**: Generates solution based on scramble
 
-## Usage
-
-1. Open `index.html` in a web browser
-2. Long press spacebar to start timer (text turns red, then green after 0.5s)
-3. Release spacebar to stop timer
-4. Long press spacebar again to reset and prepare for next solve
-5. Use sidebar to manage times and view statistics
-
 ## Technical Details
 
 - Pure HTML/CSS/JavaScript (no build step required)
