@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubik's Cube Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar sidebar-left" id="left-sidebar">
+            <button class="sidebar-toggle" id="left-toggle" title="Toggle Times">☰</button>
+            <div class="sidebar-content">
+                <div class="times-section">
+                    <h3>Times</h3>
+                    <div id="times-list" class="times-list"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="scramble-container">
+                <div id="scramble" class="scramble-text"></div>
+            </div>
+            
+            <div class="timer-container">
+                <div id="timer" class="timer">0.000</div>
+            </div>
+            
+            <div class="controls">
+                <button id="solve-btn" class="solve-btn">Generate Optimal Solution</button>
+            </div>
+            
+            <div id="solution" class="solution-container"></div>
+        </div>
+        
+        <div class="sidebar sidebar-right" id="right-sidebar">
+            <button class="sidebar-toggle" id="right-toggle" title="Toggle Statistics">☰</button>
+            <div class="sidebar-content">
+                <div class="session-controls">
+                    <h3>Sessions</h3>
+                    <select id="session-select" class="session-select"></select>
+                    <div class="session-buttons">
+                        <button id="new-session-btn" class="btn-small">New</button>
+                        <button id="rename-session-btn" class="btn-small">Rename</button>
+                        <button id="delete-session-btn" class="btn-small">Delete</button>
+                    </div>
+                </div>
+                
+                <div class="stats-section">
+                    <h3>Current Statistics</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Mean of 3:</span>
+                        <span id="mo3" class="stat-value">-</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Average of 5:</span>
+                        <span id="ao5" class="stat-value">-</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Average of 12:</span>
+                        <span id="ao12" class="stat-value">-</span>
+                    </div>
+                </div>
+                
+                <div class="stats-section">
+                    <h3>Best Statistics</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Best Mo3:</span>
+                        <span id="best-mo3" class="stat-value">-</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Best Ao5:</span>
+                        <span id="best-ao5" class="stat-value">-</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Best Ao12:</span>
+                        <span id="best-ao12" class="stat-value">-</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Session Mean:</span>
+                        <span id="session-mean" class="stat-value">-</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Best Solve:</span>
+                        <span id="best-solve" class="stat-value">-</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Worst Solve:</span>
+                        <span id="worst-solve" class="stat-value">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="cube-solver.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
