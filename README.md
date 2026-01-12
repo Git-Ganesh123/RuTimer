@@ -1,5 +1,4 @@
 # Rubik's Cube Timer
-# test
 A fully-featured Rubik's cube timer web application with session management, statistics tracking, and scramble generation.
 
 ## Features
